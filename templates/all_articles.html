@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+{%for item in index%}
+<h1>{{item.title}}</h1><br>
+Written by: {{item.author}} on {{item.create_date}}<hr><br>
+{{item.body|safe}}<br>
+<hr>
+{%endfor%}
+  
+{% endblock %}
